@@ -3,18 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>Planets</title>
+	<style>
+		.redtext { color: red; }
+	</style>
 	<script>
 	function init() {
 		var planet = document.getElementById("greenplanet");
 		planet.innerHTML = "Red Aler: hit by phaser fire!";
+        planet.setAttribute("class", "redtext");
 	}
 
-	window.onload = init;
+	window.onload = init; // Calling the function only when the page is fully loaded
 	</script>
 	</head>
 	<body>
 		<h1>Green Planet</h1>
-		<p id="greenplanet">All is well</p>
+		<p id="greenplanet" class="redtext">All is well</p>
 		<h1>Red Planet</h1>
 		<p id="redplanet">Nothing to report</p>
 		<h1>Blue Planet</h1>
